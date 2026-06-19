@@ -89,7 +89,10 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="relative bg-[#001c55] text-white py-20 px-6 md:px-12 lg:px-24 overflow-hidden">
+    <section
+      className="relative bg-[#001c55] text-white py-20 px-6 md:px-12 lg:px-24 overflow-hidden"
+      id="process"
+    >
       {/* Grid Background */}
       <div
         className="absolute inset-0 opacity-10 pointer-events-none"

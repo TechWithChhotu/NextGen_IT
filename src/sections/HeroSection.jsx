@@ -2,7 +2,10 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <header className="relative bg-[#00143d] text-white min-h-screen flex flex-col justify-between overflow-hidden">
+    <header
+      className="relative bg-[#00143d] text-white min-h-screen flex flex-col justify-between overflow-hidden"
+      id="home"
+    >
       {/* ON-PAGE SEO: Technical Blueprint Background Grid Pattern */}
       <div
         className="absolute inset-0 opacity-10 pointer-events-none"

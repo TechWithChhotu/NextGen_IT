@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // React router link imported
 
 const ServicesSection = () => {
   const verticals = [
@@ -14,6 +15,7 @@ const ServicesSection = () => {
         "CUSTOM APPS",
         "E-COMMERCE",
       ],
+      URL: "/services/web-development", // Updated to dynamic slug route
       icon: (
         <svg
           className="w-5 h-5 text-slate-700"
@@ -36,6 +38,7 @@ const ServicesSection = () => {
       description:
         "Native-feel Android and iOS apps engineered to place your Bihar-based brand or startup directly into your customer's pocket.",
       tags: ["ANDROID APPS", "BUSINESS APPS", "UTILITY APPS"],
+      URL: "/services/app-development", // Updated to dynamic slug route
       icon: (
         <svg
           className="w-5 h-5 text-slate-700"
@@ -55,7 +58,6 @@ const ServicesSection = () => {
     {
       number: "03",
       title: "Digital Marketing & SEO",
-      // On-Page SEO optimized description targeting Local Bihar Markets
       description:
         "Result-driven On-Page SEO optimization, advanced technical SEO audits, and targeted local campaigns engineered to make your business rank #1 in Sheikhpura.",
       tags: [
@@ -65,6 +67,7 @@ const ServicesSection = () => {
         "LEAD GEN",
         "CONTENT MARKETING",
       ],
+      URL: "/services/digital-marketing", // Placeholders for future services
       icon: (
         <svg
           className="w-5 h-5 text-slate-700"
@@ -87,6 +90,7 @@ const ServicesSection = () => {
       description:
         "Pixel-perfect digital assets, posters, banners, and corporate business cards designed to make a stellar statement for local enterprises.",
       tags: ["BRAND CREATIVES", "POSTERS", "BANNERS", "SOCIAL MEDIA ART"],
+      URL: "/services/graphic-design",
       icon: (
         <svg
           className="w-5 h-5 text-slate-700"
@@ -109,6 +113,7 @@ const ServicesSection = () => {
       description:
         "Memorable brand identity systems, guidelines, and corporate iconography tailored to transform local businesses into recognized national brands.",
       tags: ["LOGO SYSTEMS", "BRAND GUIDELINES", "VECTOR ART", "STATIONERY"],
+      URL: "/services/logo-design",
       icon: (
         <svg
           className="w-5 h-5 text-slate-700"
@@ -136,6 +141,7 @@ const ServicesSection = () => {
         "AD CREATIVES",
         "MOTION GRAPHICS",
       ],
+      URL: "/services/video-editing",
       icon: (
         <svg
           className="w-5 h-5 text-slate-700"
@@ -155,8 +161,11 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="relative bg-[#ffffff] text-slate-950 py-24 px-6 md:px-12 lg:px-24 overflow-hidden">
-      {/* Light Blueprint Grid Background (As seen in image-1781746704723.png) */}
+    <section
+      className="relative bg-[#ffffff] text-slate-950 py-24 px-6 md:px-12 lg:px-24 overflow-hidden"
+      id="services"
+    >
+      {/* Light Blueprint Grid Background */}
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
@@ -172,7 +181,6 @@ const ServicesSection = () => {
             <span className="text-xs uppercase tracking-widest text-blue-600 font-bold block mb-4">
               — WHAT WE DO
             </span>
-            {/* Semantic Header Optimized for Agency Keyword Search */}
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
               Six verticals.
               <br />
@@ -221,7 +229,7 @@ const ServicesSection = () => {
                 </p>
               </div>
 
-              {/* Bottom Tag List & Direct CTA Link */}
+              {/* Bottom Tag List & Direct Link Router Component */}
               <div>
                 <div className="flex flex-wrap gap-1.5 mb-8">
                   {vertical.tags.map((tag, tagIdx) => (
@@ -234,7 +242,11 @@ const ServicesSection = () => {
                   ))}
                 </div>
 
-                <div className="pt-4 border-t border-slate-100 flex justify-between items-center group/link cursor-pointer">
+                {/* Wrapped entire row element in Link for intuitive UX */}
+                <Link
+                  to={vertical.URL}
+                  className="pt-4 border-t border-slate-100 flex justify-between items-center group/link cursor-pointer block"
+                >
                   <span className="text-xs font-bold text-slate-800 group-hover/link:text-blue-600 transition-colors">
                     Discuss this service
                   </span>
@@ -253,7 +265,7 @@ const ServicesSection = () => {
                       />
                     </svg>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           ))}

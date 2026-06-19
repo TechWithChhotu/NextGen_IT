@@ -15,7 +15,6 @@ import WhyChooseUsSection from "../sections/WhyChooseUsSection";
 export default function Home() {
   return (
     <>
-      <Navbar />
       <HeroSection />
       <ServicesSection />
       <AboutSection />
@@ -26,7 +25,6 @@ export default function Home() {
       <TestimonialsSection />
       <CTASection />
       <ContactSection />
-      <Footer />
     </>
   );
 }

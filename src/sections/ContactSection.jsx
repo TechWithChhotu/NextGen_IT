@@ -25,7 +25,10 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="bg-white text-slate-900 py-20 px-6 md:px-12 lg:px-24">
+    <section
+      className="bg-white text-slate-900 py-20 px-6 md:px-12 lg:px-24"
+      id="contact"
+    >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
         {/* Left Side: Contact Information & Local SEO Content */}
         <div className="lg:col-span-5 flex flex-col justify-between h-full">

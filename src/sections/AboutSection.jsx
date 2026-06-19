@@ -2,7 +2,10 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section className="bg-[#f4f7fa] py-20 px-6 md:px-12 lg:px-24 text-slate-950 font-sans">
+    <section
+      className="bg-[#f4f7fa] py-20 px-6 md:px-12 lg:px-24 text-slate-950 font-sans"
+      id="about"
+    >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
         {/* LEFT BLOCK: Main About & Testimonial (Takes 7 Cols on Desktop) */}
         <div className="lg:col-span-7 bg-white p-8 md:p-12 border border-slate-200/60 rounded-sm flex flex-col justify-between shadow-sm">
