@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const ContactSection = () => {
   const [budget, setBudget] = useState("Under ₹10k");
+  const [loading, setLoading] = useState(false); // 🔥 Added loading state
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    service: "Website Development",
+    service: "web-development",
     message: "",
   });
 
@@ -18,10 +21,77 @@ const ContactSection = () => {
     "Not sure yet",
   ];
 
-  const handleSubmit = (e) => {
+  // 🔥 Check if all HTML required fields are filled out
+  // const isFormValid =
+  //   formData.name.trim() !== "" &&
+  //   formData.message.trim() !== "" &&
+  //   formData.email.includes("@") &&
+  //   formData.description.trim().length >= 10; // Check for 10+ characters
+  // / 1. Email check karne ke liye Regex Pattern
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  // 2. Isko aap apne 'isFormValid' logic me aise add karein:
+  const isFormValid =
+    formData.name.trim() !== "" &&
+    formData.message.trim().length >= 10 &&
+    validateEmail(formData.email);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log({ ...formData, budget });
-    // Handle form submission logic here
+    if (!isFormValid) return; // Prevent submission if fields aren't valid
+
+    setLoading(true); // 🔥 Turn on loader
+
+    const backendBaseUrl =
+      import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+
+    const payload = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      serviceInterest: formData.service,
+      estimatedBudget: budget,
+      description: formData.message,
+    };
+
+    try {
+      const response = await axios.post(
+        `${backendBaseUrl}/api/inquiries`,
+        payload,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        },
+      );
+
+      if (response.data.success || response.status === 201) {
+        alert("Inquiry successfully logged into our system infrastructure!");
+
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "web-development",
+          message: "",
+        });
+        setBudget("Under ₹10k");
+      }
+    } catch (error) {
+      console.error("Submission Error:", error);
+      if (error.response && error.response.data) {
+        const errMsg =
+          error.response.data.message || JSON.stringify(error.response.data);
+        alert("Backend Error:\n" + errMsg);
+      } else {
+        alert("Could not connect to backend server. Check connection or port.");
+      }
+    } finally {
+      setLoading(false); // 🔥 Turn off loader regardless of success or failure
+    }
   };
 
   return (
@@ -30,13 +100,12 @@ const ContactSection = () => {
       id="contact"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-        {/* Left Side: Contact Information & Local SEO Content */}
+        {/* Left Side: Contact Information */}
         <div className="lg:col-span-5 flex flex-col justify-between h-full">
           <div>
             <span className="text-xs uppercase tracking-widest text-blue-600 font-bold block mb-3">
               — GET IN TOUCH
             </span>
-            {/* On-Page SEO: Target Keywords optimized for Sheikhpura, Bihar */}
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
               Let's build something <br />
               <span className="text-blue-600">that grows your business.</span>
@@ -46,7 +115,6 @@ const ContactSection = () => {
               with ideas, timelines and a clear quote.
             </p>
 
-            {/* Info Cards Layout identical to image-3.png */}
             <div className="space-y-6">
               {/* Call Us */}
               <div className="flex items-center gap-4">
@@ -108,7 +176,7 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              {/* Location (SEO Local Business optimization) */}
+              {/* Location */}
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-700">
                   <svg
@@ -146,7 +214,7 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* WhatsApp Direct Action Button */}
+          {/* WhatsApp Button */}
           <div className="mt-12">
             <a
               href="https://wa.me/918229084288"
@@ -162,7 +230,7 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* Right Side: Interactive Lead Generation Form as seen in image-3.png */}
+        {/* Right Side: Interactive Form */}
         <div className="lg:col-span-7 bg-[#f8faff] border border-slate-100 rounded-xl p-8 md:p-10">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -174,6 +242,7 @@ const ContactSection = () => {
                 <input
                   type="text"
                   required
+                  value={formData.name}
                   placeholder="John Doe"
                   className="w-full bg-white border border-slate-200 rounded-md px-4 py-3 text-sm text-slate-800 placeholder-slate-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
                   onChange={(e) =>
@@ -190,6 +259,7 @@ const ContactSection = () => {
                 <input
                   type="email"
                   required
+                  value={formData.email}
                   placeholder="you@email.com"
                   className="w-full bg-white border border-slate-200 rounded-md px-4 py-3 text-sm text-slate-800 placeholder-slate-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
                   onChange={(e) =>
@@ -206,7 +276,8 @@ const ContactSection = () => {
                   PHONE (OPTIONAL)
                 </label>
                 <input
-                  type="tel"
+                  type="text"
+                  value={formData.phone}
                   placeholder="+91 ..."
                   className="w-full bg-white border border-slate-200 rounded-md px-4 py-3 text-sm text-slate-800 placeholder-slate-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
                   onChange={(e) =>
@@ -215,7 +286,7 @@ const ContactSection = () => {
                 />
               </div>
 
-              {/* Service Interest Field (SEO included for On-page optimizations) */}
+              {/* Service Field */}
               <div className="flex flex-col gap-2">
                 <label className="text-[11px] uppercase tracking-wider font-bold text-slate-400">
                   SERVICE INTERESTED IN *
@@ -228,18 +299,17 @@ const ContactSection = () => {
                       setFormData({ ...formData, service: e.target.value })
                     }
                   >
-                    <option value="Website Development">
-                      Website Development
-                    </option>
-                    <option value="On-Page SEO & Digital Marketing">
-                      On-Page SEO & Digital Marketing
-                    </option>
-                    <option value="Mobile App Development">
+                    <option value="web-development">Website Development</option>
+                    <option value="app-development">
                       Mobile App Development
                     </option>
-                    <option value="UI/UX Product Design">
-                      UI/UX Product Design
+                    <option value="digital-marketing">
+                      On-Page SEO & Digital Marketing
                     </option>
+                    <option value="logo-design">Logo Design</option>
+                    <option value="graphic-design">Graphic Design</option>
+                    <option value="video-editing">Video Editing</option>
+                    <option value="Other">Other</option>
                   </select>
                   <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-slate-400">
                     <svg
@@ -291,6 +361,7 @@ const ContactSection = () => {
               <textarea
                 required
                 rows="4"
+                value={formData.message}
                 placeholder="A short description of what you want to build..."
                 className="w-full bg-white border border-slate-200 rounded-md px-4 py-3 text-sm text-slate-800 placeholder-slate-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all resize-none"
                 onChange={(e) =>
@@ -299,26 +370,59 @@ const ContactSection = () => {
               />
             </div>
 
-            {/* Submit Button */}
+            {/* 🔥 Submit Button with Loader and Validation Check */}
             <div className="pt-2">
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3.5 rounded-md transition-colors shadow-sm text-sm"
+                disabled={loading || !isFormValid}
+                className={`inline-flex items-center gap-2 font-semibold px-6 py-3.5 rounded-md transition-all shadow-sm text-sm ${
+                  loading || !isFormValid
+                    ? "bg-blue-400 text-slate-100 cursor-not-allowed opacity-80"
+                    : "bg-blue-600 hover:bg-blue-700 text-white cursor-pointer"
+                }`}
               >
-                Send Message
-                <svg
-                  className="w-4 h-4 transform rotate-45"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-                  />
-                </svg>
+                {loading ? (
+                  <>
+                    Sending...
+                    <svg
+                      className="animate-spin h-4 w-4 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
+                    </svg>
+                  </>
+                ) : (
+                  <>
+                    Send Message
+                    <svg
+                      className="w-4 h-4 transform rotate-45"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                      />
+                    </svg>
+                  </>
+                )}
               </button>
             </div>
 

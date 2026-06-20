@@ -30,7 +30,7 @@
   animation: marquee-right 40s linear infinite;
 }
 
-/* माउस ओवर करने पर स्क्रॉलिंग रुक जाएगी ताकि यूजर आराम से पढ़ सके */
+/* stop scrolling  when  mouse  over */
 .animate-marquee-left:hover,
 .animate-marquee-right:hover {
   animation-play-state: paused;
