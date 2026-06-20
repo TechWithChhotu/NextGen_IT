@@ -15,7 +15,7 @@ const ServicesSection = () => {
         "CUSTOM APPS",
         "E-COMMERCE",
       ],
-      URL: "/services/web-development", // Updated to dynamic slug route
+      URL: "/service/web-development", // Updated to dynamic slug route
       icon: (
         <svg
           className="w-5 h-5 text-slate-700"
@@ -38,7 +38,7 @@ const ServicesSection = () => {
       description:
         "Native-feel Android and iOS apps engineered to place your Bihar-based brand or startup directly into your customer's pocket.",
       tags: ["ANDROID APPS", "BUSINESS APPS", "UTILITY APPS"],
-      URL: "/services/app-development", // Updated to dynamic slug route
+      URL: "/service/app-development", // Updated to dynamic slug route
       icon: (
         <svg
           className="w-5 h-5 text-slate-700"
@@ -67,7 +67,7 @@ const ServicesSection = () => {
         "LEAD GEN",
         "CONTENT MARKETING",
       ],
-      URL: "/services/digital-marketing", // Placeholders for future services
+      URL: "/service/digital-marketing", // Placeholders for future services
       icon: (
         <svg
           className="w-5 h-5 text-slate-700"
@@ -90,7 +90,7 @@ const ServicesSection = () => {
       description:
         "Pixel-perfect digital assets, posters, banners, and corporate business cards designed to make a stellar statement for local enterprises.",
       tags: ["BRAND CREATIVES", "POSTERS", "BANNERS", "SOCIAL MEDIA ART"],
-      URL: "/services/graphic-design",
+      URL: "/service/graphic-design",
       icon: (
         <svg
           className="w-5 h-5 text-slate-700"
@@ -113,7 +113,7 @@ const ServicesSection = () => {
       description:
         "Memorable brand identity systems, guidelines, and corporate iconography tailored to transform local businesses into recognized national brands.",
       tags: ["LOGO SYSTEMS", "BRAND GUIDELINES", "VECTOR ART", "STATIONERY"],
-      URL: "/services/logo-design",
+      URL: "/service/logo-design",
       icon: (
         <svg
           className="w-5 h-5 text-slate-700"
@@ -141,7 +141,7 @@ const ServicesSection = () => {
         "AD CREATIVES",
         "MOTION GRAPHICS",
       ],
-      URL: "/services/video-editing",
+      URL: "/service/video-editing",
       icon: (
         <svg
           className="w-5 h-5 text-slate-700"
