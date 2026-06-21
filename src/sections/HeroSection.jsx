@@ -1,5 +1,10 @@
 import React from "react";
+import wordmark_transparent from "../assets/nextgenitsolutions.png";
+import { Globe, Smartphone, TrendingUp, Palette, Video } from "lucide-react";
 
+import logo from "../assets/wordmark_transparent.png";
+import girihindaImage from "../assets/girihindaImage.jpg";
+import HeroBrandCard from "./HeroBrandCard";
 const HeroSection = () => {
   return (
     <header
@@ -124,6 +129,11 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
+          {/* <HeroBrandCard
+            logo={logo}
+            wordmark={wordmark_transparent}
+            sheikhpuraImage={girihindaImage}
+          /> */}
         </div>
       </div>
 
