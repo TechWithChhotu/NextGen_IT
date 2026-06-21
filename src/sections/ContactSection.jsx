@@ -46,8 +46,10 @@ const ContactSection = () => {
     setLoading(true); // 🔥 Turn on loader
 
     const backendBaseUrl =
-      import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
-
+      import.meta.env.VITE_BACKEND_URL || "http://localhost:5173";
+    // Sahi tarika Vite me
+    const API_URL = import.meta.env.VITE_BACKEND_URL;
+    console.log("APP_URL:  ", API_URL);
     const payload = {
       name: formData.name,
       email: formData.email,

@@ -77,6 +77,11 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
+            <ul>
+              <li>
+                <a href="/faq">FAQ</a>
+              </li>
+            </ul>
           </div>
 
           {/* Column 3: Contact & Direct Connect (SEO Local Signals) */}

@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import ServiceDetail from "./pages/ServiceDetail"; // इकलौता डायनेमिक पेज
 import Portfolio from "./pages/Portfolio";
 import Careers from "./pages/Careers";
+import FAQSection from "./pages/FAQ";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="service/:serviceSlug" element={<ServiceDetail />} />
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="careers" element={<Careers />} />
+          <Route path="faq" element={<FAQSection />} />
 
           {/* 404 Route */}
           <Route
