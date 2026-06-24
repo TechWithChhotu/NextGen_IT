@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative z-50 w-full bg-[#00143d] border-b border-white/5 backdrop-blur-md bg-opacity-80 sticky top-0">
+    <nav className="relative z-50 w-full bg-[#FFFFFF] border-b border-[#E5E7EB] backdrop-blur-md bg-opacity-90 sticky top-0 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
         <div className="flex justify-between items-center h-20">
           {/* LEFT: Logo Section - Links back to homepage top */}
@@ -15,65 +15,66 @@ const Navbar = () => {
             <div className="flex items-center bg-transparent py-1 px-2 rounded">
               <img
                 src={full_logo_transparent}
-                alt="NextGen IT Solutions Sheikhpura Bihar"
-                className="h-10 md:h-11 w-auto object-contain mix-blend-screen contrast-125 brightness-110 bg-white rounded-lg"
+                alt="Tech Solex Solutions Sheikhpura Bihar"
+                className="h-10 md:h-11 w-auto object-contain transition-all"
               />
             </div>
           </Link>
 
           {/* MIDDLE: Nav Links (Desktop) - Smooth scrolling with HashLink */}
-          <div className="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide text-slate-300">
+          <div className="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide text-[#1A1A1A]">
             <HashLink
               smooth
               to="/#services"
-              className="hover:text-blue-400 transition-colors py-2 relative group"
+              className="hover:text-[#0A2E86] transition-colors py-2 relative group"
             >
               Services
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full" />
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#21C4FF] transition-all group-hover:w-full" />
             </HashLink>
 
             <HashLink
               smooth
               to="/#about"
-              className="hover:text-blue-400 transition-colors py-2 relative group"
+              className="hover:text-[#0A2E86] transition-colors py-2 relative group"
             >
               About
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full" />
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#21C4FF] transition-all group-hover:w-full" />
             </HashLink>
 
             <HashLink
               smooth
               to="/#process"
-              className="hover:text-blue-400 transition-colors py-2 relative group"
+              className="hover:text-[#0A2E86] transition-colors py-2 relative group"
             >
               Process
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full" />
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#21C4FF] transition-all group-hover:w-full" />
             </HashLink>
 
             <HashLink
               smooth
               to="/#contact"
-              className="hover:text-blue-400 transition-colors py-2 relative group"
+              className="hover:text-[#0A2E86] transition-colors py-2 relative group"
             >
               Contact
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full" />
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#21C4FF] transition-all group-hover:w-full" />
             </HashLink>
 
             <HashLink
               smooth
               to="/portfolio"
-              className="hover:text-blue-400 transition-colors py-2 relative group"
+              className="hover:text-[#0A2E86] transition-colors py-2 relative group"
             >
               Portfolio
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full" />
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#21C4FF] transition-all group-hover:w-full" />
             </HashLink>
+
             <HashLink
               smooth
               to="/careers"
-              className="hover:text-blue-400 transition-colors py-2 relative group"
+              className="hover:text-[#0A2E86] transition-colors py-2 relative group"
             >
               Careers
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full" />
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#21C4FF] transition-all group-hover:w-full" />
             </HashLink>
           </div>
 
@@ -81,10 +82,10 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center gap-6">
             <a
               href="tel:+918229084288"
-              className="text-xs md:text-sm font-bold text-slate-300 hover:text-white transition-colors flex items-center gap-2"
+              className="text-xs md:text-sm font-bold text-[#666666] hover:text-[#0A2E86] transition-colors flex items-center gap-2"
             >
               <svg
-                className="w-4 h-4 text-blue-500"
+                className="w-4 h-4 text-[#21C4FF]"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -102,7 +103,7 @@ const Navbar = () => {
             <HashLink
               smooth
               to="/#contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white text-xs md:text-sm font-bold px-5 py-2.5 rounded shadow-md shadow-blue-600/10 transition-all duration-300"
+              className="bg-[#0A2E86] hover:bg-[#21C4FF] text-white text-xs md:text-sm font-bold px-5 py-2.5 rounded shadow-sm hover:shadow-md transition-all duration-300"
             >
               Get a Quote →
             </HashLink>
@@ -113,7 +114,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="text-slate-300 hover:text-white focus:outline-none"
+              className="text-[#1A1A1A] hover:text-[#0A2E86] focus:outline-none"
               aria-label="Toggle navigation menu"
             >
               <svg
@@ -145,14 +146,14 @@ const Navbar = () => {
 
       {/* Mobile Drawer Overlay Menu */}
       <div
-        className={`md:hidden absolute top-20 left-0 w-full bg-[#001035] border-b border-white/5 transition-all duration-300 ease-in-out ${isOpen ? "opacity-100 visible h-auto py-6" : "opacity-0 invisible h-0 overflow-hidden"}`}
+        className={`md:hidden absolute top-20 left-0 w-full bg-[#F8FAFC] border-b border-[#E5E7EB] transition-all duration-300 ease-in-out ${isOpen ? "opacity-100 visible h-auto py-6" : "opacity-0 invisible h-0 overflow-hidden"}`}
       >
-        <div className="flex flex-col px-6 space-y-4 text-base font-semibold tracking-wide text-slate-300">
+        <div className="flex flex-col px-6 space-y-4 text-base font-semibold tracking-wide text-[#1A1A1A]">
           <HashLink
             smooth
             to="/#services"
             onClick={() => setIsOpen(false)}
-            className="hover:text-white transition-colors"
+            className="hover:text-[#0A2E86] transition-colors"
           >
             Services
           </HashLink>
@@ -161,7 +162,7 @@ const Navbar = () => {
             smooth
             to="/#about"
             onClick={() => setIsOpen(false)}
-            className="hover:text-white transition-colors"
+            className="hover:text-[#0A2E86] transition-colors"
           >
             About
           </HashLink>
@@ -170,7 +171,7 @@ const Navbar = () => {
             smooth
             to="/#process"
             onClick={() => setIsOpen(false)}
-            className="hover:text-white transition-colors"
+            className="hover:text-[#0A2E86] transition-colors"
           >
             Process
           </HashLink>
@@ -179,15 +180,15 @@ const Navbar = () => {
             smooth
             to="/#contact"
             onClick={() => setIsOpen(false)}
-            className="hover:text-white transition-colors"
+            className="hover:text-[#0A2E86] transition-colors"
           >
             Contact
           </HashLink>
 
-          <div className="pt-4 border-t border-white/5 flex flex-col gap-4">
+          <div className="pt-4 border-t border-[#E5E7EB] flex flex-col gap-4">
             <a
               href="tel:+918229084288"
-              className="text-sm font-bold text-slate-400 flex items-center gap-2"
+              className="text-sm font-bold text-[#666666] hover:text-[#0A2E86] flex items-center gap-2"
             >
               +91 8229084288
             </a>
@@ -196,7 +197,7 @@ const Navbar = () => {
               smooth
               to="/#contact"
               onClick={() => setIsOpen(false)}
-              className="bg-blue-600 text-white text-sm font-bold px-5 py-3 rounded text-center shadow-md shadow-blue-600/10"
+              className="bg-[#0A2E86] hover:bg-[#21C4FF] text-white text-sm font-bold px-5 py-3 rounded text-center shadow-sm transition-all"
             >
               Get a Quote →
             </HashLink>

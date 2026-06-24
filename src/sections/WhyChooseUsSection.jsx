@@ -6,7 +6,7 @@ const WhyChooseUsSection = () => {
       id: 1,
       icon: (
         <svg
-          className="w-6 h-6 text-blue-500"
+          className="w-6 h-6"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -27,7 +27,7 @@ const WhyChooseUsSection = () => {
       id: 2,
       icon: (
         <svg
-          className="w-6 h-6 text-blue-500"
+          className="w-6 h-6"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -48,7 +48,7 @@ const WhyChooseUsSection = () => {
       id: 3,
       icon: (
         <svg
-          className="w-6 h-6 text-blue-500"
+          className="w-6 h-6"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -69,7 +69,7 @@ const WhyChooseUsSection = () => {
       id: 4,
       icon: (
         <svg
-          className="w-6 h-6 text-blue-500"
+          className="w-6 h-6"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -91,52 +91,55 @@ const WhyChooseUsSection = () => {
   return (
     <section
       id="why-choose-us"
-      className="bg-white py-24 px-6 md:px-12 lg:px-24 text-slate-900 font-sans border-t border-slate-100"
+      className="bg-[#f4f7fa] py-24 px-6 md:px-12 lg:px-24 text-slate-950 font-sans border-t border-slate-200/60"
     >
       <div className="max-w-7xl mx-auto">
         {/* UPPER BLOCK: Header Description */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-20 items-end">
-          <div className="lg:col-span-6 space-y-3">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 items-end">
+          <div className="lg:col-span-7 space-y-3">
             <span className="text-[11px] uppercase tracking-widest text-blue-600 font-extrabold block">
               — WHY CHOOSE US
             </span>
-            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 leading-[1.15]">
               We engineer scalable{" "}
               <span className="text-blue-600">digital products</span> from
               scratch.
             </h2>
           </div>
-          <div className="lg:col-span-6">
-            <p className="text-slate-500 text-sm md:text-base leading-relaxed max-w-xl">
+          <div className="lg:col-span-5">
+            <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-xl">
               Market mein basic template-built slow apps aur websites ki bheed
-              hai. At **NextGen IT Solutions**, we purely craft high-performance
-              custom software architectures to help your business scale faster.
+              hai. At <strong>NextGen IT Solutions</strong>, we purely craft
+              high-performance custom software architectures to help your
+              business scale faster.
             </p>
           </div>
         </div>
 
         {/* BOTTOM BLOCK: Reasons Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {reasons.map((reason) => (
             <div
               key={reason.id}
-              className="group p-6 bg-slate-50 hover:bg-white rounded-sm border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-300 flex flex-col justify-between"
+              className="group p-8 bg-white rounded-sm border border-slate-200/60 hover:border-transparent hover:shadow-xl hover:shadow-blue-950/5 transition-all duration-300 flex flex-col justify-between"
             >
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {/* Icon Wrapper */}
-                <div className="w-12 h-12 bg-white rounded-sm border border-slate-200/60 flex items-center justify-center group-hover:bg-blue-600 group-hover:border-blue-600 group-hover:text-white text-blue-600 transition-colors duration-300 shadow-sm">
+                <div className="w-12 h-12 bg-[#f4f7fa] rounded-sm border border-slate-200/40 flex items-center justify-center group-hover:bg-blue-600 group-hover:border-blue-600 text-blue-600 group-hover:text-white transition-all duration-300 shadow-inner">
                   {reason.icon}
                 </div>
 
-                {/* Title */}
-                <h3 className="text-lg font-black text-slate-900 tracking-tight pt-2">
-                  {reason.title}
-                </h3>
+                <div className="space-y-2">
+                  {/* Title */}
+                  <h3 className="text-lg font-black text-slate-950 tracking-tight">
+                    {reason.title}
+                  </h3>
 
-                {/* Description */}
-                <p className="text-slate-500 text-xs md:text-sm leading-relaxed">
-                  {reason.description}
-                </p>
+                  {/* Description */}
+                  <p className="text-slate-600 text-xs md:text-sm leading-relaxed">
+                    {reason.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

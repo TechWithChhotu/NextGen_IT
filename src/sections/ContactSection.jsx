@@ -3,7 +3,7 @@ import axios from "axios";
 
 const ContactSection = () => {
   const [budget, setBudget] = useState("Under ₹10k");
-  const [loading, setLoading] = useState(false); // 🔥 Added loading state
+  const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -21,19 +21,13 @@ const ContactSection = () => {
     "Not sure yet",
   ];
 
-  // 🔥 Check if all HTML required fields are filled out
-  // const isFormValid =
-  //   formData.name.trim() !== "" &&
-  //   formData.message.trim() !== "" &&
-  //   formData.email.includes("@") &&
-  //   formData.description.trim().length >= 10; // Check for 10+ characters
-  // / 1. Email check karne ke liye Regex Pattern
+  // Email check using Regex Pattern
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
-  // 2. Isko aap apne 'isFormValid' logic me aise add karein:
+  // Form validity logic
   const isFormValid =
     formData.name.trim() !== "" &&
     formData.message.trim().length >= 10 &&
@@ -41,15 +35,13 @@ const ContactSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!isFormValid) return; // Prevent submission if fields aren't valid
+    if (!isFormValid) return;
 
-    setLoading(true); // 🔥 Turn on loader
+    setLoading(true);
 
     const backendBaseUrl =
-      import.meta.env.VITE_BACKEND_URL || "http://localhost:5173";
-    // Sahi tarika Vite me
-    const API_URL = import.meta.env.VITE_BACKEND_URL;
-    console.log("APP_URL:  ", API_URL);
+      import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+
     const payload = {
       name: formData.name,
       email: formData.email,
@@ -92,27 +84,27 @@ const ContactSection = () => {
         alert("Could not connect to backend server. Check connection or port.");
       }
     } finally {
-      setLoading(false); // 🔥 Turn off loader regardless of success or failure
+      setLoading(false);
     }
   };
 
   return (
     <section
-      className="bg-white text-slate-900 py-20 px-6 md:px-12 lg:px-24"
+      className="bg-[#FFFFFF] text-[#1A1A1A] py-20 px-6 md:px-12 lg:px-24"
       id="contact"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
         {/* Left Side: Contact Information */}
         <div className="lg:col-span-5 flex flex-col justify-between h-full">
           <div>
-            <span className="text-xs uppercase tracking-widest text-blue-600 font-bold block mb-3">
+            <span className="text-xs uppercase tracking-widest text-[#0A2E86] font-bold block mb-3">
               — GET IN TOUCH
             </span>
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#1A1A1A] mb-6 leading-tight">
               Let's build something <br />
-              <span className="text-blue-600">that grows your business.</span>
+              <span className="text-[#0A2E86]">that grows your business.</span>
             </h2>
-            <p className="text-slate-600 text-base md:text-lg mb-10 max-w-md leading-relaxed">
+            <p className="text-[#666666] text-base md:text-lg mb-10 max-w-md leading-relaxed">
               Tell us a bit about your project — we'll respond within 24 hours
               with ideas, timelines and a clear quote.
             </p>
@@ -120,9 +112,9 @@ const ContactSection = () => {
             <div className="space-y-6">
               {/* Call Us */}
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-700">
+                <div className="p-3 bg-[#FFFFFF] border border-[#E5E7EB] rounded-lg text-[#666666]">
                   <svg
-                    className="w-5 h-5"
+                    className="w-5 h-5 text-[#21C4FF]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -136,12 +128,12 @@ const ContactSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-xs uppercase tracking-wider text-slate-400 font-semibold block">
+                  <span className="text-xs uppercase tracking-wider text-[#999999] font-semibold block">
                     CALL US
                   </span>
                   <a
                     href="tel:+918229084288"
-                    className="text-base font-bold text-slate-900 hover:text-blue-600 transition-colors"
+                    className="text-base font-bold text-[#1A1A1A] hover:text-[#0A2E86] transition-colors"
                   >
                     +91 8229084288
                   </a>
@@ -150,9 +142,9 @@ const ContactSection = () => {
 
               {/* Email */}
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-700">
+                <div className="p-3 bg-[#FFFFFF] border border-[#E5E7EB] rounded-lg text-[#666666]">
                   <svg
-                    className="w-5 h-5"
+                    className="w-5 h-5 text-[#21C4FF]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -166,12 +158,12 @@ const ContactSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-xs uppercase tracking-wider text-slate-400 font-semibold block">
+                  <span className="text-xs uppercase tracking-wider text-[#999999] font-semibold block">
                     EMAIL
                   </span>
                   <a
                     href="mailto:support.nextgenit@gmail.com"
-                    className="text-base font-bold text-slate-900 hover:text-blue-600 transition-colors"
+                    className="text-base font-bold text-[#1A1A1A] hover:text-[#0A2E86] transition-colors"
                   >
                     support.nextgenit@gmail.com
                   </a>
@@ -180,9 +172,9 @@ const ContactSection = () => {
 
               {/* Location */}
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-700">
+                <div className="p-3 bg-[#FFFFFF] border border-[#E5E7EB] rounded-lg text-[#666666]">
                   <svg
-                    className="w-5 h-5"
+                    className="w-5 h-5 text-[#21C4FF]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -202,13 +194,13 @@ const ContactSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-xs uppercase tracking-wider text-slate-400 font-semibold block">
+                  <span className="text-xs uppercase tracking-wider text-[#999999] font-semibold block">
                     LOCATION
                   </span>
-                  <span className="text-base font-bold text-slate-900 block">
+                  <span className="text-base font-bold text-[#1A1A1A] block">
                     Sheikhpura, Bihar, India
                   </span>
-                  <span className="text-xs text-slate-500">
+                  <span className="text-xs text-[#666666]">
                     Serving clients across India • Remote-friendly
                   </span>
                 </div>
@@ -217,12 +209,13 @@ const ContactSection = () => {
           </div>
 
           {/* WhatsApp Button */}
+          {/* WhatsApp Button */}
           <div className="mt-12">
             <a
               href="https://wa.me/918229084288"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-[#0a2558] hover:bg-blue-950 text-white font-medium px-6 py-3.5 rounded-md transition-all duration-300 shadow-md"
+              className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-[#FFFFFF] font-semibold px-6 py-3.5 rounded-md transition-all duration-300 shadow-md transform hover:-translate-y-0.5"
             >
               <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.411 0 11.971 0c3.178.001 6.165 1.24 8.413 3.494 2.25 2.253 3.487 5.244 3.485 8.423-.003 6.623-5.353 11.97-11.916 11.97-2.004-.001-3.973-.507-5.73-1.474L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.852.002-2.632-1.023-5.105-2.887-6.972C16.579 1.916 14.11 1.88 11.97 1.88c-5.437 0-9.862 4.421-9.866 9.854-.001 1.706.46 3.375 1.334 4.868l-.995 3.636 3.724-.976zm11.37-7.37c-.302-.15-1.787-.88-2.062-.98-.275-.1-.475-.15-.675.15-.2.3-.775.98-.95 1.18-.175.2-.35.225-.65.075-.301-.15-1.267-.467-2.414-1.492-.893-.796-1.496-1.78-1.671-2.08-.175-.3-.018-.462.13-.61.135-.133.301-.35.451-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.244-.589-.493-.51-.675-.52-.172-.007-.368-.009-.565-.009-.196 0-.518.074-.789.374-.27.3-1.035 1.013-1.035 2.47 0 1.457 1.061 2.864 1.21 3.064.149.2 2.088 3.196 5.06 4.481.707.306 1.258.489 1.69.626.712.226 1.36.194 1.872.118.571-.085 1.787-.73 2.037-1.43.25-.7.25-1.3.175-1.43-.075-.125-.275-.2-.575-.35z" />
@@ -233,12 +226,12 @@ const ContactSection = () => {
         </div>
 
         {/* Right Side: Interactive Form */}
-        <div className="lg:col-span-7 bg-[#f8faff] border border-slate-100 rounded-xl p-8 md:p-10">
+        <div className="lg:col-span-7 bg-[#FFFFFF] border border-[#E5E7EB] rounded-xl p-8 md:p-10 shadow-sm">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Name Field */}
               <div className="flex flex-col gap-2">
-                <label className="text-[11px] uppercase tracking-wider font-bold text-slate-400">
+                <label className="text-[11px] uppercase tracking-wider font-bold text-[#999999]">
                   YOUR NAME *
                 </label>
                 <input
@@ -246,7 +239,7 @@ const ContactSection = () => {
                   required
                   value={formData.name}
                   placeholder="John Doe"
-                  className="w-full bg-white border border-slate-200 rounded-md px-4 py-3 text-sm text-slate-800 placeholder-slate-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                  className="w-full bg-[#FFFFFF] border border-[#E5E7EB] rounded-md px-4 py-3 text-sm text-[#1A1A1A] placeholder-[#999999] focus:outline-none focus:border-[#0A2E86] focus:ring-1 focus:ring-[#21C4FF] transition-all"
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
@@ -255,7 +248,7 @@ const ContactSection = () => {
 
               {/* Email Field */}
               <div className="flex flex-col gap-2">
-                <label className="text-[11px] uppercase tracking-wider font-bold text-slate-400">
+                <label className="text-[11px] uppercase tracking-wider font-bold text-[#999999]">
                   EMAIL *
                 </label>
                 <input
@@ -263,7 +256,7 @@ const ContactSection = () => {
                   required
                   value={formData.email}
                   placeholder="you@email.com"
-                  className="w-full bg-white border border-slate-200 rounded-md px-4 py-3 text-sm text-slate-800 placeholder-slate-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                  className="w-full bg-[#FFFFFF] border border-[#E5E7EB] rounded-md px-4 py-3 text-sm text-[#1A1A1A] placeholder-[#999999] focus:outline-none focus:border-[#0A2E86] focus:ring-1 focus:ring-[#21C4FF] transition-all"
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
@@ -274,14 +267,14 @@ const ContactSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Phone Field */}
               <div className="flex flex-col gap-2">
-                <label className="text-[11px] uppercase tracking-wider font-bold text-slate-400">
+                <label className="text-[11px] uppercase tracking-wider font-bold text-[#999999]">
                   PHONE (OPTIONAL)
                 </label>
                 <input
                   type="text"
                   value={formData.phone}
                   placeholder="+91 ..."
-                  className="w-full bg-white border border-slate-200 rounded-md px-4 py-3 text-sm text-slate-800 placeholder-slate-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                  className="w-full bg-[#FFFFFF] border border-[#E5E7EB] rounded-md px-4 py-3 text-sm text-[#1A1A1A] placeholder-[#999999] focus:outline-none focus:border-[#0A2E86] focus:ring-1 focus:ring-[#21C4FF] transition-all"
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })
                   }
@@ -290,12 +283,12 @@ const ContactSection = () => {
 
               {/* Service Field */}
               <div className="flex flex-col gap-2">
-                <label className="text-[11px] uppercase tracking-wider font-bold text-slate-400">
+                <label className="text-[11px] uppercase tracking-wider font-bold text-[#999999]">
                   SERVICE INTERESTED IN *
                 </label>
                 <div className="relative">
                   <select
-                    className="w-full bg-white border border-slate-200 rounded-md px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 appearance-none cursor-pointer transition-all"
+                    className="w-full bg-[#FFFFFF] border border-[#E5E7EB] rounded-md px-4 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#0A2E86] focus:ring-1 focus:ring-[#21C4FF] appearance-none cursor-pointer transition-all"
                     value={formData.service}
                     onChange={(e) =>
                       setFormData({ ...formData, service: e.target.value })
@@ -313,7 +306,7 @@ const ContactSection = () => {
                     <option value="video-editing">Video Editing</option>
                     <option value="Other">Other</option>
                   </select>
-                  <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-slate-400">
+                  <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-[#666666]">
                     <svg
                       className="w-4 h-4"
                       fill="none"
@@ -334,7 +327,7 @@ const ContactSection = () => {
 
             {/* Estimated Budget Selector */}
             <div className="flex flex-col gap-3">
-              <label className="text-[11px] uppercase tracking-wider font-bold text-slate-400">
+              <label className="text-[11px] uppercase tracking-wider font-bold text-[#999999]">
                 ESTIMATED BUDGET
               </label>
               <div className="flex flex-wrap gap-2">
@@ -345,8 +338,8 @@ const ContactSection = () => {
                     onClick={() => setBudget(option)}
                     className={`px-4 py-2 text-xs font-semibold rounded-md transition-all border ${
                       budget === option
-                        ? "bg-[#0a2558] border-[#0a2558] text-white shadow-sm"
-                        : "bg-white border-slate-200 text-slate-600 hover:border-slate-300"
+                        ? "bg-[#0A2E86] border-[#0A2E86] text-[#FFFFFF] shadow-sm"
+                        : "bg-[#FFFFFF] border-[#E5E7EB] text-[#666666] hover:border-[#999999]"
                     }`}
                   >
                     {option}
@@ -357,7 +350,7 @@ const ContactSection = () => {
 
             {/* Description Message Box */}
             <div className="flex flex-col gap-2">
-              <label className="text-[11px] uppercase tracking-wider font-bold text-slate-400">
+              <label className="text-[11px] uppercase tracking-wider font-bold text-[#999999]">
                 TELL US ABOUT YOUR PROJECT *
               </label>
               <textarea
@@ -365,29 +358,29 @@ const ContactSection = () => {
                 rows="4"
                 value={formData.message}
                 placeholder="A short description of what you want to build..."
-                className="w-full bg-white border border-slate-200 rounded-md px-4 py-3 text-sm text-slate-800 placeholder-slate-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all resize-none"
+                className="w-full bg-[#FFFFFF] border border-[#E5E7EB] rounded-md px-4 py-3 text-sm text-[#1A1A1A] placeholder-[#999999] focus:outline-none focus:border-[#0A2E86] focus:ring-1 focus:ring-[#21C4FF] transition-all resize-none"
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }
               />
             </div>
 
-            {/* 🔥 Submit Button with Loader and Validation Check */}
+            {/* Submit Button */}
             <div className="pt-2">
               <button
                 type="submit"
                 disabled={loading || !isFormValid}
                 className={`inline-flex items-center gap-2 font-semibold px-6 py-3.5 rounded-md transition-all shadow-sm text-sm ${
                   loading || !isFormValid
-                    ? "bg-blue-400 text-slate-100 cursor-not-allowed opacity-80"
-                    : "bg-blue-600 hover:bg-blue-700 text-white cursor-pointer"
+                    ? "bg-[#0A2E86] text-[#FFFFFF] cursor-not-allowed opacity-50"
+                    : "bg-[#0A2E86] hover:bg-[#0a2558] text-[#FFFFFF] cursor-pointer"
                 }`}
               >
                 {loading ? (
                   <>
                     Sending...
                     <svg
-                      className="animate-spin h-4 w-4 text-white"
+                      className="animate-spin h-4 w-4 text-[#FFFFFF]"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -428,7 +421,7 @@ const ContactSection = () => {
               </button>
             </div>
 
-            <p className="text-[11px] text-slate-400 leading-relaxed pt-2">
+            <p className="text-[11px] text-[#999999] leading-relaxed pt-2">
               By submitting, you agree to be contacted about your inquiry. We
               respond within 24 hours.
             </p>

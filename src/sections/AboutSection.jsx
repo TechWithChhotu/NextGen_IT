@@ -12,7 +12,7 @@ const AboutSection = () => {
           <div>
             {/* Top Subtitle */}
             <span className="text-[11px] uppercase tracking-widest text-blue-600 font-extrabold block mb-4">
-              — ABOUT NEXTGEN IT
+              — ABOUT TECH SOLEX
             </span>
 
             {/* SEO Optimized Semantic Heading */}
@@ -24,9 +24,9 @@ const AboutSection = () => {
             {/* Main Text Content with Local SEO Target Keywords */}
             <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl mb-8">
               Born in Sheikhpura, Bihar — built for businesses across India.
-              NextGen IT Solutions is a modern digital partner helping startups,
-              local shops, entrepreneurs and professionals leverage technology
-              to grow faster through customized web apps and tailored{" "}
+              Tech Solex is a modern digital partner helping startups, local
+              shops, entrepreneurs and professionals leverage technology to grow
+              faster through customized web apps and tailored{" "}
               <strong>On-Page SEO strategies</strong>.
             </p>
           </div>
@@ -67,7 +67,6 @@ const AboutSection = () => {
         <div className="lg:col-span-5 flex flex-col gap-6">
           {/* Top Blue Block: Our Vision */}
           <div className="relative bg-[#001c55] text-white p-8 md:p-10 rounded-sm overflow-hidden flex-1 shadow-md">
-            {/* Blueprint Micro Grid overlay inside vision card as seen in image_752ebc.png */}
             <div
               className="absolute inset-0 opacity-[0.03] pointer-events-none"
               style={{
@@ -75,7 +74,6 @@ const AboutSection = () => {
                 backgroundSize: "25px 25px",
               }}
             />
-            {/* Vision Icon */}
             <div className="mb-6 text-blue-400">
               <svg
                 className="w-6 h-6"
@@ -108,7 +106,6 @@ const AboutSection = () => {
 
           {/* Middle Two Columns: Mission & Promise */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {/* Mission Card */}
             <div className="bg-white p-6 border border-slate-200/60 rounded-sm shadow-sm flex flex-col justify-between min-h-[160px]">
               <div className="text-blue-600 mb-4">
                 <svg
@@ -135,7 +132,6 @@ const AboutSection = () => {
               </div>
             </div>
 
-            {/* Promise Card */}
             <div className="bg-white p-6 border border-slate-200/60 rounded-sm shadow-sm flex flex-col justify-between min-h-[160px]">
               <div className="text-blue-600 mb-4">
                 <svg
@@ -148,7 +144,7 @@ const AboutSection = () => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
-                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138z"
                   />
                 </svg>
               </div>
@@ -163,7 +159,7 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* Bottom Cyan/Blue Block: Where We Serve */}
+          {/* Bottom Gradient Block */}
           <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 md:p-8 rounded-sm shadow-md">
             <span className="text-[10px] tracking-widest text-blue-100 font-extrabold uppercase block mb-2">
               WHERE WE SERVE

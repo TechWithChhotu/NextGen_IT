@@ -6,10 +6,10 @@ const ProcessSection = () => {
       number: "01",
       title: "Discover & Strategize",
       description:
-        "We listen to your business, your goals and your audience — then map the right digital solution.",
+        "We analyze market goals to build high-performance digital architectures, helping brands in Sheikhpura and across Bihar maximize online reach.",
       icon: (
         <svg
-          className="w-5 h-5 text-blue-400"
+          className="w-5 h-5 text-[#21C4FF]"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -27,10 +27,10 @@ const ProcessSection = () => {
       number: "02",
       title: "Design & Plan",
       description:
-        "Wireframes, brand visuals and user journeys — designed for clarity, conversion and credibility.",
+        "Custom enterprise UI/UX design layouts tailored meticulously for premium conversions, fast layout load speeds, and maximum local ranking relevance.",
       icon: (
         <svg
-          className="w-5 h-5 text-blue-400"
+          className="w-5 h-5 text-[#21C4FF]"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -48,10 +48,10 @@ const ProcessSection = () => {
       number: "03",
       title: "Build & Launch",
       description:
-        "Code, content and creatives engineered with quality. Tested, polished, and shipped on time.",
+        "Engineered by Tech Solex using clean code structures and technical on-page SEO frameworks to load instantly across all regional network tiers.",
       icon: (
         <svg
-          className="w-5 h-5 text-blue-400"
+          className="w-5 h-5 text-[#21C4FF]"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -69,10 +69,10 @@ const ProcessSection = () => {
       number: "04",
       title: "Grow & Optimize",
       description:
-        "We measure performance, run campaigns and iterate — so your growth doesn't plateau.",
+        "Ongoing security performance audits, local citation workflows, and speed iterations designed to keep your business dominating search ranks.",
       icon: (
         <svg
-          className="w-5 h-5 text-blue-400"
+          className="w-5 h-5 text-[#21C4FF]"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -90,14 +90,14 @@ const ProcessSection = () => {
 
   return (
     <section
-      className="relative bg-[#001c55] text-white py-20 px-6 md:px-12 lg:px-24 overflow-hidden"
+      className="relative bg-[#FFFFFF] text-[#1A1A1A] py-20 px-6 md:px-12 lg:px-24 overflow-hidden"
       id="process"
     >
-      {/* Grid Background */}
+      {/* Light Clean Grid Background */}
       <div
-        className="absolute inset-0 opacity-10 pointer-events-none"
+        className="absolute inset-0 opacity-20 pointer-events-none"
         style={{
-          backgroundImage: `linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(to right, #E5E7EB 1px, transparent 1px), linear-gradient(to bottom, #E5E7EB 1px, transparent 1px)`,
           backgroundSize: "50px 50px",
         }}
       />
@@ -106,39 +106,39 @@ const ProcessSection = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-16 gap-6">
           <div>
-            <span className="text-xs uppercase tracking-widest text-blue-400 font-semibold block mb-3">
+            <span className="text-xs uppercase tracking-widest text-[#0A2E86] font-extrabold block mb-3">
               — HOW WE WORK
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-              A clear 4-step process.
+            <h2 className="text-4xl md:text-5xl font-black leading-tight text-[#0A2E86]">
+              Our Web Development Process.
               <br />
-              <span className="text-blue-400">Zero guesswork.</span>
+              <span className="text-[#21C4FF]">Trusted in Bihar.</span>
             </h2>
           </div>
-          <p className="text-gray-300 max-w-md text-base md:text-lg leading-relaxed pt-2">
-            From discovery to delivery — and beyond. We move fast, communicate
-            transparently and treat every project like it's our own.
+          <p className="text-[#666666] max-w-md text-base md:text-lg leading-relaxed pt-2">
+            From architecture plan to deployment. Tech Solex builds
+            lightning-fast software architectures for growing enterprises and
+            local startups throughout Bihar.
           </p>
         </div>
 
-        {/* 4-Step Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-blue-900/40 divide-y md:divide-y-0 lg:divide-x divide-blue-900/40">
+        {/* 4-Step Grid Layout with Light Clean Borders */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-[#E5E7EB] bg-[#FFFFFF] divide-y md:divide-y-0 lg:divide-x divide-[#E5E7EB] rounded-lg shadow-sm">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="p-8 relative flex flex-col justify-between min-h-[300px] group transition-all duration-300 hover:bg-blue-900/20 md:border-b lg:border-b-0 border-blue-900/40"
+              className="p-8 relative flex flex-col justify-between min-h-[320px] group transition-all duration-300 hover:bg-[#F8FAFC] md:border-b lg:border-b-0 border-[#E5E7EB]"
             >
-              {/* Top Row: Icon & Outlined Big Number */}
+              {/* Top Row: Tech Cyan Accent Icon Wrapper & Outlined Big Number */}
               <div className="flex justify-between items-start">
-                <div className="p-3 bg-blue-950/80 border border-blue-800/40 rounded-md backdrop-blur-sm">
+                <div className="p-3 bg-[#F8FAFC] border border-[#E5E7EB] rounded-md shadow-sm group-hover:border-[#21C4FF] transition-colors duration-300">
                   {step.icon}
                 </div>
-                {/* Fix: Added absolute text color and webkit-text-stroke for clear visibility */}
                 <span
-                  className="text-7xl font-bold tracking-tighter select-none transition-opacity duration-300 opacity-20 group-hover:opacity-40"
+                  className="text-7xl font-black tracking-tighter select-none transition-all duration-300 opacity-20 group-hover:opacity-60 text-slate-200"
                   style={{
                     color: "transparent",
-                    WebkitTextStroke: "1px rgba(255, 255, 255, 0.6)",
+                    WebkitTextStroke: "1px #0A2E86",
                   }}
                 >
                   {step.number}
@@ -147,10 +147,10 @@ const ProcessSection = () => {
 
               {/* Bottom Content */}
               <div className="mt-12">
-                <h3 className="text-xl font-bold mb-3 text-white">
+                <h3 className="text-xl font-bold mb-3 text-[#0A2E86] group-hover:text-[#21C4FF] transition-colors duration-300">
                   {step.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-[#666666] text-sm leading-relaxed">
                   {step.description}
                 </p>
               </div>

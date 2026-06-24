@@ -1,8 +1,9 @@
 import React from "react";
 import full_logo_transparent from "../assets/full_logo_transparent.png";
+
 const Footer = () => {
   return (
-    <footer className="bg-[#000d24] text-slate-300 pt-16 pb-8 border-t border-white/5 relative overflow-hidden font-sans">
+    <footer className="bg-[#0A2E86] text-slate-300 pt-16 pb-8 border-t border-white/10 relative overflow-hidden font-sans">
       {/* Subtle Digital Background Grids for Tech Agency Aesthetics */}
       <div
         className="absolute inset-0 opacity-5 pointer-events-none"
@@ -14,40 +15,42 @@ const Footer = () => {
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 relative z-10">
         {/* TOP BLOCK: Main Navigation & Company Info */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/5">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
           {/* Column 1: Brand Info & Logo Placement */}
           <div className="md:col-span-5 space-y-5">
             <div className="flex items-center -ml-2">
-              {/* Logo Wrapper with Smart Filter to neutralize white background from file_000000004ce07208a8b4964e58700da1_2.png */}
+              {/* Logo Wrapper with Smart Filter to blend perfectly with brand background */}
               <img
                 src={full_logo_transparent}
-                alt="NextGen IT Solutions Logo"
+                alt="TechSolex Logo"
                 className="h-20 w-auto object-contain mix-blend-screen brightness-125 contrast-110 bg-white rounded-2xl"
               />
             </div>
 
-            {/* Tagline from IMG_20260615_130715_2.png */}
-            <p className="text-xs font-mono tracking-widest text-blue-400 uppercase">
+            {/* Tagline for Brand Identity */}
+            <p className="text-xs font-mono tracking-widest text-[#21C4FF] uppercase font-bold">
               Your growth, our commitment.
             </p>
 
-            <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
-              Leading digital transformation and high-performance engineering.
-              We optimize your local and global presence through expert web
-              development and strategic On-Page SEO.
+            <p className="text-sm text-slate-200 max-w-sm leading-relaxed">
+              Leading digital transformation and high-performance software
+              engineering. We optimize your local and global presence through
+              custom website development, app architecture, and result-driven
+              On-Page SEO optimization.
             </p>
           </div>
 
-          {/* Column 2: Quick Navigation Links */}
+          {/* Column 2: Quick Navigation Links (SEO Target Keywords) */}
           <div className="md:col-span-3 space-y-4">
             <h4 className="text-sm font-black text-white uppercase tracking-wider">
-              Services
+              Core Services
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
                 <a
                   href="#web-dev"
-                  className="hover:text-blue-400 transition-colors"
+                  className="hover:text-[#21C4FF] transition-colors"
+                  title="Professional Website Development Services"
                 >
                   Web Development
                 </a>
@@ -55,7 +58,8 @@ const Footer = () => {
               <li>
                 <a
                   href="#app-dev"
-                  className="hover:text-blue-400 transition-colors"
+                  className="hover:text-[#21C4FF] transition-colors"
+                  title="Custom Mobile Application Engineering"
                 >
                   Mobile Applications
                 </a>
@@ -63,7 +67,8 @@ const Footer = () => {
               <li>
                 <a
                   href="#seo"
-                  className="hover:text-blue-500 font-semibold text-blue-400 transition-colors"
+                  className="hover:text-[#21C4FF] font-semibold text-[#21C4FF] transition-colors"
+                  title="On-Page Search Engine Optimization"
                 >
                   On-Page SEO Optimization
                 </a>
@@ -71,29 +76,33 @@ const Footer = () => {
               <li>
                 <a
                   href="#branding"
-                  className="hover:text-blue-400 transition-colors"
+                  className="hover:text-[#21C4FF] transition-colors"
+                  title="UI/UX Corporate Identity & Branding"
                 >
                   UI/UX & Branding
                 </a>
               </li>
-            </ul>
-            <ul>
               <li>
-                <a href="/faq">FAQ</a>
+                <a
+                  href="/faq"
+                  className="hover:text-[#21C4FF] transition-colors"
+                >
+                  Frequently Asked Questions
+                </a>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Contact & Direct Connect (SEO Local Signals) */}
+          {/* Column 3: Contact & Direct Connect (Local SEO Signals) */}
           <div className="md:col-span-4 space-y-4">
             <h4 className="text-sm font-black text-white uppercase tracking-wider">
               Connect With Us
             </h4>
-            <ul className="space-y-3.5 text-sm">
-              {/* Phone */}
-              <li className="flex items-center gap-3">
+            <address className="space-y-3.5 text-sm not-italic">
+              {/* Phone contact */}
+              <div className="flex items-center gap-3">
                 <svg
-                  className="w-4 h-4 text-blue-500 shrink-0"
+                  className="w-4 h-4 text-[#21C4FF] shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -107,16 +116,16 @@ const Footer = () => {
                 </svg>
                 <a
                   href="tel:+918229084288"
-                  className="hover:text-white transition-colors font-semibold tracking-wide"
+                  className="hover:text-white transition-colors font-bold tracking-wide text-white"
                 >
                   +91 8229084288
                 </a>
-              </li>
+              </div>
 
-              {/* Email */}
-              <li className="flex items-center gap-3">
+              {/* Business Email */}
+              <div className="flex items-center gap-3">
                 <svg
-                  className="w-4 h-4 text-blue-500 shrink-0"
+                  className="w-4 h-4 text-[#21C4FF] shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -129,17 +138,17 @@ const Footer = () => {
                   />
                 </svg>
                 <a
-                  href="mailto:support.nextgenit@gmail.com"
+                  href="mailto:contact.techsolex@gmail.com"
                   className="hover:text-white transition-colors"
                 >
-                  support.nextgenit@gmail.com
+                  contact.techsolex@gmail.com
                 </a>
-              </li>
+              </div>
 
               {/* Website Domain */}
-              <li className="flex items-center gap-3">
+              <div className="flex items-center gap-3">
                 <svg
-                  className="w-4 h-4 text-blue-500 shrink-0"
+                  className="w-4 h-4 text-[#21C4FF] shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -152,19 +161,19 @@ const Footer = () => {
                   />
                 </svg>
                 <a
-                  href="https://NgenIT.in"
+                  href="https://techsolex.in"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors text-blue-400 font-bold"
+                  className="hover:text-white transition-colors text-[#21C4FF] font-extrabold"
                 >
-                  NgenIT.in
+                  techsolex.in
                 </a>
-              </li>
+              </div>
 
-              {/* Location (Crucial for Local SEO Schema) */}
-              <li className="flex items-start gap-3">
+              {/* Physical Location Mapping for Schema and Local Ranking */}
+              <div className="flex items-start gap-3 pt-1">
                 <svg
-                  className="w-4 h-4 text-blue-500 shrink-0 mt-0.5"
+                  className="w-4 h-4 text-[#21C4FF] shrink-0 mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -182,33 +191,33 @@ const Footer = () => {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span className="text-slate-400">
-                  <strong className="text-slate-200">
-                    NextGen IT Solutions
+                <div className="text-slate-300 text-xs leading-relaxed">
+                  <strong className="text-white block font-semibold">
+                    TechSolex Headquarters
                   </strong>
-                  <br />
                   Sheikhpura, Bihar, India
-                </span>
-              </li>
-            </ul>
+                </div>
+              </div>
+            </address>
           </div>
         </div>
 
-        {/* BOTTOM BLOCK: Copyright & Strategic Acknowledgements */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        {/* BOTTOM BLOCK: Copyright & Strategic Local SEO Crawl Targets */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
             <p>
-              © {new Date().getFullYear()} NextGen IT Solutions. All rights
-              reserved.
+              © {new Date().getFullYear()} <strong>TechSolex</strong>. All
+              rights reserved.
             </p>
           </div>
 
           {/* Geo-Targeted Anchor Text for On-Page Local Dominance */}
-          <div className="flex flex-wrap gap-2 text-center sm:text-right">
-            <span>Engineered for supreme performance in</span>
+          <div className="flex flex-wrap gap-2 text-center sm:text-right justify-center sm:justify-end">
+            <span>Best Web Development Agency in</span>
             <a
               href="#local-seo"
-              className="text-slate-400 hover:text-blue-400 font-medium transition-colors"
+              className="text-[#21C4FF] hover:underline font-medium transition-colors"
+              title="Top Rated IT Services & SEO Company in Bihar"
             >
               Sheikhpura, South Bihar & Across India
             </a>
