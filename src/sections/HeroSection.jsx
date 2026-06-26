@@ -1,6 +1,6 @@
 import React from "react";
-import wordmark_transparent from "../assets/nextgenitsolutions.png"; // Explicit file reference mapping
-import logo from "../assets/wordmark_transparent.png";
+import wordmark_transparent from "../assets/wordmark_transparent.jpeg"; // Explicit file reference mapping
+import logo from "../assets/wordmark_transparent.jpeg";
 import girihindaImage from "../assets/girihindaImage.jpg";
 import HeroBrandCard from "./HeroBrandCard";
 

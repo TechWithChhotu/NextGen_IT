@@ -60,46 +60,52 @@ export default function HeroBrandCard({ logo, wordmark, sheikhpuraImage }) {
             <img
               src={logo}
               alt="TechSolex Logo"
-              className="w-10 h-auto object-contain transition-transform duration-500 group-hover:scale-110"
+              className="w-16 h-auto object-contain transition-transform duration-500 group-hover:scale-110"
             />
           </div>
 
           {/* Full Named Wordmark Logo [30% Navy Accent for contrast] */}
-          <img
-            src={wordmark}
-            alt="TechSolex Wordmark"
-            className="w-36 mt-1.5 object-contain"
-          />
-
           {/* Slogan Identity Tagline */}
-          <p className="text-[8px] font-bold text-slate-400 tracking-widest uppercase mt-1">
-            Your growth, our commitment
-          </p>
+          <div className="flex justify-center items-center w-full mt-3">
+            <p className="text-[8px] font-bold text-slate-400 tracking-widest uppercase flex items-center gap-1.5">
+              Technology
+              <span className="text-[#0068fc] font-black text-[10px] select-none">
+                •
+              </span>
+              Solutions
+              <span className="text-[#0068fc] font-black text-[10px] select-none">
+                •
+              </span>
+              Excellence
+            </p>
+          </div>
         </div>
 
         {/* High-End Image Layer with Seamless Soft Masking */}
-        <div className="absolute top-[148px] bottom-[54px] inset-x-0 overflow-hidden pointer-events-none">
+        {/* High-End Image Layer with Seamless Soft Masking */}
+        <div className="absolute top-[100px] bottom-[54px] inset-x-0 overflow-hidden pointer-events-none">
           <img
             src={sheikhpuraImage}
             alt="Sheikhpura Landscape"
-            className="w-full h-full object-cover opacity-95 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
+            className="w-full h-full object-cover opacity-95 transition-all duration-700 ease-out
+               group-hover:opacity-100 group-hover:scale-105"
+            style={{
+              WebkitMaskImage:
+                "linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%)",
+              maskImage:
+                "linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%)",
+            }}
           />
-
-          {/* Top Fade to White Body */}
-          <div className="absolute top-0 inset-x-0 h-8 bg-gradient-to-b from-white to-transparent z-10" />
-
-          {/* Bottom Fade to 30% Deep Navy Footer Track */}
-          <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-[#0A2E86] to-transparent z-10" />
         </div>
 
         {/* Regional Metadata Layer (High Contrast White Overlay) */}
         <div className="absolute bottom-[66px] left-0 right-0 z-30 text-center pointer-events-none">
-          <p className="text-white text-[10px] font-extrabold tracking-wide drop-shadow-[0_2px_4px_rgba(10,46,134,0.5)] flex items-center justify-center gap-1">
+          <p className="text-white text-[10px] font-extrabold tracking-wide  flex items-center justify-center gap-1">
             <span>📍</span> SHEIKHPURA, BIHAR
           </p>
-          <p className="text-[#21C4FF] text-[7.5px] font-black tracking-[0.2em] uppercase mt-0.5 drop-shadow-[0_1px_3px_rgba(10,46,134,0.5)]">
+          {/* <p className="text-[#0068fc] text-[7.5px] font-black tracking-[0.2em] uppercase mt-0.5 ">
             LOCAL ROOTS. DIGITAL GROWTH.
-          </p>
+          </p> */}
         </div>
 
         {/* Solid Deep Blue Footer Panel [30% Component Layout] */}

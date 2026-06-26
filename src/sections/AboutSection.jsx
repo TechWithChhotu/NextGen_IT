@@ -12,7 +12,7 @@ const AboutSection = () => {
           <div>
             {/* Top Subtitle */}
             <span className="text-[11px] uppercase tracking-widest text-blue-600 font-extrabold block mb-4">
-              — ABOUT TECH SOLEX
+              — ABOUT TechSolex
             </span>
 
             {/* SEO Optimized Semantic Heading */}
