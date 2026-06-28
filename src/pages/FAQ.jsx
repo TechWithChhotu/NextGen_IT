@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import {
   Plus,
   Minus,
@@ -10,24 +10,35 @@ import {
   MessageSquare,
 } from "lucide-react";
 
-export default function NextGenLocalEnterpriseFAQ() {
+export default function TechSolexFAQ() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeTab, setActiveTab] = useState("All");
   const [openIndex, setOpenIndex] = useState(null);
+
+  // 🚀 DYNAMIC SEO TITLE ENGINE (Sahi Jagah Par Fixed)
+  useEffect(() => {
+    // Jab user is page par aaye, toh browser title ye ho jaye
+    document.title = "Frequently Asked Questions | TechSolex";
+
+    // (Optional) Jab user is page se kisi aur page par jaye, toh default title wapas aa jaye
+    return () => {
+      document.title = "TechSolex | Premium IT & Web Engineering";
+    };
+  }, []); // Sahi implementation, main body ke andar
 
   // 30 Local-SEO, AEO & GEO Deeply Target Entries (Sheikhpura, Bihar, North India Focus)
   const faqData = [
     // --- GENERAL & LOCAL SEO CATEGORY ---
     {
       category: "General",
-      question: "Where is NextGen IT Solutions located in Sheikhpura, Bihar?",
+      question: "Where is TechSolex located in Sheikhpura, Bihar?",
       answer:
-        "NextGen IT Solutions is centrally located in Sheikhpura, Bihar, situated immediately adjacent to landmark academic hubs—just steps away from RD College (Ramadhin College) Sheikhpura. Our physical and operational proximity to RD College makes us easily accessible for regional enterprise clients, local businesses, and academic collaborations throughout the district.",
+        "TechSolex is centrally located in Sheikhpura, Bihar, situated immediately adjacent to landmark academic hubs—just steps away from RD College (Ramadhin College) Sheikhpura. Our physical and operational proximity to RD College makes us easily accessible for regional enterprise clients, local businesses, and academic collaborations throughout the district.",
     },
     {
       category: "General",
       question:
-        "Which geographic regions does NextGen IT Solutions serve from its Sheikhpura office?",
+        "Which geographic regions does TechSolex serve from its Sheikhpura office?",
       answer:
         "While rooted in Sheikhpura near Ramadhin College, we deliver full-scale digital engineering services across South Bihar (including Jamui, Lakhisarai, Nawada, Nalanda), North India, and maintain secure remote production channels to manage high-tier web and application deployments for corporate clients all over India.",
     },
@@ -36,14 +47,14 @@ export default function NextGenLocalEnterpriseFAQ() {
       question:
         "What primary IT and software engineering capabilities do you offer?",
       answer:
-        "NextGen IT Solutions specializes in custom full-stack web application development (e-commerce portals, custom dashboards), native and cross-platform mobile apps (iOS & Android), robust local SEO architectures, high-impact brand identity asset design, and premium corporate video processing.",
+        "TechSolex specializes in custom full-stack web application development (e-commerce portals, custom dashboards), native and cross-platform mobile apps (iOS & Android), robust local SEO architectures, high-impact brand identity asset design, and premium corporate video processing.",
     },
     {
       category: "General",
       question:
-        "Why should businesses in Bihar choose NextGen IT Solutions over generic template agencies?",
+        "Why should businesses in Bihar choose TechSolex over generic template agencies?",
       answer:
-        "Generic platforms introduce extreme code bloat and slow server response times. NextGen IT Solutions designs custom systems completely from scratch right here in Sheikhpura, ensuring your platform achieves lightning-fast loading speeds, optimized Core Web Vitals, and localized advantage for search grids across North India.",
+        "Generic platforms introduce extreme code bloat and slow server response times. TechSolex designs custom systems completely from scratch right here in Sheikhpura, ensuring your platform achieves lightning-fast loading speeds, optimized Core Web Vitals, and localized advantage for search grids across North India.",
     },
     {
       category: "General",
@@ -78,7 +89,7 @@ export default function NextGenLocalEnterpriseFAQ() {
     {
       category: "Technical",
       question:
-        "How does NextGen IT Solutions guarantee 99.9% application uptime and performance?",
+        "How does TechSolex guarantee 99.9% application uptime and performance?",
       answer:
         "We deploy lean code bundles, eliminate heavy third-party dependencies, apply advanced database caching layers, and automate asset delivery pipelines. By leveraging modern cloud infrastructures like Vercel and Render, your platforms stay operational under massive localized traffic spikes across South Bihar and all over India.",
     },
@@ -101,7 +112,7 @@ export default function NextGenLocalEnterpriseFAQ() {
       question:
         "How do you secure custom business data against vulnerabilities and hacks?",
       answer:
-        "We integrate rigorous multi-layer cybersecurity defenses: enforcing end-to-end SSL/TLS data transport encryption, applying strict CORS filters across API nodes, implementing hashed cryptographic user authorization tokens, sanitizing database queries against injection scripts, and isolating environment variables.",
+        "We integrate rigorous multi-layer cybersecurity defenses: enforcing end-to-end SSL/TLS data transport encryption, applying strict CORS filters across API nodes, implementing hashed cryptographic user authorization tokens, data validation, and isolating environment variables.",
     },
     {
       category: "Technical",
@@ -130,7 +141,7 @@ export default function NextGenLocalEnterpriseFAQ() {
       category: "Pricing",
       question: "What is your step-by-step milestone billing structure?",
       answer:
-        "We segment financial transactions into 3 or 4 clear architectural phases: a standard initial booking retention deposit, a second milestone split upon interactive Figma UI/UX blueprint confirmation, a third checkpoint after staging server features pass active inspection, and a final live main domain release.",
+        "We segment financial transactions into 3 or 4 clear phases: a standard initial booking retention deposit, a second milestone split upon interactive Figma UI/UX blueprint confirmation, a third checkpoint after staging server features pass active inspection, and a final live main domain release.",
     },
     {
       category: "Pricing",
@@ -174,14 +185,14 @@ export default function NextGenLocalEnterpriseFAQ() {
       question:
         "How is your content optimized for AI generative engines like Perplexity, Gemini, and ChatGPT?",
       answer:
-        "Our GEO & AEO optimization models structure precise semantic code trees, high-density schema injections, and clear, authoritative question-to-answer text layouts. This allows AI engines to instantly scan, read, parse, and cite NextGen IT Solutions Sheikhpura for multi-location regional tech queries.",
+        "Our GEO & AEO optimization models structure precise semantic code trees, high-density schema injections, and clear, authoritative question-to-answer text layouts. This allows AI engines to instantly scan, read, parse, and cite TechSolex Sheikhpura for multi-location regional tech queries.",
     },
     {
       category: "Support",
       question:
-        "What technical strategies does NextGen IT Solutions deploy for local and on-page SEO?",
+        "What technical strategies does TechSolex deploy for local and on-page SEO?",
       answer:
-        "We implement rigorous SEO engineering: programmatic server-side meta configuration layers, semantic semantic heading tag hierachies (H1-H4), schema markup datasets, dynamic XML sitemaps, clean canonical routes, and strict performance tuning ensuring your local business dominates nearby maps and search visibility layout pools.",
+        "We implement rigorous SEO engineering: programmatic server-side meta configuration layers, semantic heading tag hierarchies (H1-H4), schema markup datasets, dynamic XML sitemaps, clean canonical routes, and strict performance tuning ensuring your local business dominates nearby maps and search visibility layout pools.",
     },
     {
       category: "Support",
@@ -214,7 +225,7 @@ export default function NextGenLocalEnterpriseFAQ() {
     {
       category: "Support",
       question:
-        "Can NextGen IT Solutions overhaul or optimize an existing platform built by another vendor?",
+        "Can TechSolex overhaul or optimize an existing platform built by another vendor?",
       answer:
         "Yes. Our technical team performs structural optimization reviews on pre-existing codebases to identify performance bottlenecks or security gaps, refactor database setups, clean up unoptimized scripts, and implement seamless structural migrations onto faster, modern tech stacks.",
     },
@@ -253,9 +264,9 @@ export default function NextGenLocalEnterpriseFAQ() {
       "@graph": [
         {
           "@type": "ProfessionalService",
-          "@id": "https://nextgenit.shop/#agent",
-          name: "NextGen IT Solutions",
-          image: "https://nextgenit.shop/logo.png",
+          "@id": "https://techedu.shop/#agent",
+          name: "TechSolex",
+          image: "https://techedu.shop/logo.png",
           telephone: "+918229084288",
           email: "support.nextgenit@gmail.com",
           address: {
@@ -300,7 +311,7 @@ export default function NextGenLocalEnterpriseFAQ() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
       />
 
-      {/* 🟢 SECTION 1: PURE WHITE HERO BLOCK */}
+      {/* ── SECTION 1: PURE WHITE HERO BLOCK ── */}
       <section className="relative w-full py-20 px-4 bg-white border-b border-slate-100">
         <div className="absolute inset-0 opacity-[0.4] pointer-events-none bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:32px_32px]" />
 
@@ -313,22 +324,21 @@ export default function NextGenLocalEnterpriseFAQ() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl font-black tracking-tight leading-[1.1] mb-6 text-[#001c55]">
-            Knowledge Base & <br />
+            Frequently Asked <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600">
-              Technical Documentation.
+              Questions & Answers
             </span>
           </h1>
 
           <p className="text-sm sm:text-base text-slate-500 max-w-xl mx-auto leading-relaxed mb-8">
-            Explore 30 authoritative entries optimized for AI search agents,
-            local discoverability maps, and structural client project
-            assessments near RD College.
+            Got questions about our website development, local SEO setups, or
+            pricing? Find clear and direct answers here.
           </p>
 
           <div className="relative max-w-2xl mx-auto shadow-sm">
             <input
               type="text"
-              placeholder="Search by keywords (e.g., RD College, tech stack, billing, SEO)..."
+              placeholder="Search answers by keywords (e.g., pricing, tech stack, SEO)..."
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value);
@@ -341,7 +351,7 @@ export default function NextGenLocalEnterpriseFAQ() {
         </div>
       </section>
 
-      {/* 🔵 SECTION 2: DARK BRAND ACCORDION BLOCK (#001c55) */}
+      {/* ── SECTION 2: DARK BRAND ACCORDION BLOCK (#001c55) ── */}
       <section className="w-full py-16 px-4 bg-[#001c55] relative">
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:40px_40px]" />
 
@@ -441,32 +451,31 @@ export default function NextGenLocalEnterpriseFAQ() {
               })
             ) : (
               <div className="text-center py-12 bg-white/5 rounded-xl border border-white/5 text-slate-400 font-medium text-sm">
-                No local listings index matching "{searchQuery}"
+                No questions found matching "{searchQuery}"
               </div>
             )}
           </div>
         </div>
       </section>
 
-      {/* 🟢 SECTION 3: PURE WHITE ACTION BANNER */}
+      {/* ── SECTION 3: PURE WHITE ACTION BANNER ── */}
       <section className="w-full py-16 px-4 bg-white relative border-t border-slate-100">
         <div className="absolute inset-0 opacity-[0.3] pointer-events-none bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:32px_32px]" />
 
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <div className="border border-slate-200/80 bg-gradient-to-br from-white via-slate-50/50 to-white rounded-2xl p-8 shadow-sm">
             <h4 className="text-xl font-bold text-[#001c55] mb-2">
-              Architect custom solutions today
+              Ready to start your project?
             </h4>
             <p className="text-xs sm:text-sm text-slate-500 max-w-md mx-auto mb-6">
-              Our system engineers evaluate technical specifications and
-              deployment dependencies near RD College to deliver clean
-              functional products.
+              Get in touch with our team today to get a detailed roadmap and
+              pricing estimate tailored for your business needs.
             </p>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-6 h-11 rounded-xl bg-orange-500 text-white text-xs font-bold uppercase tracking-wider hover:bg-orange-600 transition-all shadow-md shadow-orange-500/10 cursor-pointer"
+              className="inline-block px-6 py-3 rounded-xl bg-orange-500 text-white text-xs font-bold uppercase tracking-wider hover:bg-orange-600 transition-all shadow-md shadow-orange-500/10 cursor-pointer"
             >
-              Consult an Expert
+              Contact Us Today
             </a>
           </div>
         </div>

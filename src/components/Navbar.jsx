@@ -62,23 +62,23 @@ const Navbar = () => {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#21C4FF] transition-all group-hover:w-full" />
             </HashLink>
 
-            <HashLink
+            {/* <HashLink
               smooth
               to="/portfolio"
               className="hover:text-[#0A2E86] transition-colors py-2 relative group"
             >
               Portfolio
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#21C4FF] transition-all group-hover:w-full" />
-            </HashLink>
+            </HashLink> */}
 
-            <HashLink
+            {/* <HashLink
               smooth
               to="/careers"
               className="hover:text-[#0A2E86] transition-colors py-2 relative group"
             >
               Careers
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#21C4FF] transition-all group-hover:w-full" />
-            </HashLink>
+            </HashLink> */}
           </div>
 
           {/* RIGHT: Contact Number & CTA Trigger (Desktop) */}
@@ -88,7 +88,7 @@ const Navbar = () => {
               className="text-xs lg:text-sm font-bold text-[#666666] hover:text-[#0A2E86] transition-colors flex items-center gap-2 whitespace-nowrap"
             >
               <svg
-                className="w-4 h-4 text-[#21C4FF]"
+                className="w-4 h-4 text-[#0468fd]"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -193,24 +193,24 @@ const Navbar = () => {
           </HashLink>
 
           {/* Added to Mobile View */}
-          <HashLink
+          {/* <HashLink
             smooth
             to="/portfolio"
             onClick={() => setIsOpen(false)}
             className="hover:text-[#0A2E86] transition-colors py-1"
           >
             Portfolio
-          </HashLink>
+          </HashLink> */}
 
           {/* Added to Mobile View */}
-          <HashLink
+          {/* <HashLink
             smooth
             to="/careers"
             onClick={() => setIsOpen(false)}
             className="hover:text-[#0A2E86] transition-colors py-1"
           >
             Careers
-          </HashLink>
+          </HashLink> */}
 
           <div className="pt-4 border-t border-[#E5E7EB] flex flex-col gap-4">
             <a

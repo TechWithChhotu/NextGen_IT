@@ -11,6 +11,8 @@ import ServiceDetail from "./pages/ServiceDetail"; // इकलौता डा�
 import Portfolio from "./pages/Portfolio";
 import Careers from "./pages/Careers";
 import FAQSection from "./pages/FAQ";
+import Blog from "./pages/BlogArticles";
+import BlogDetails from "./pages/BlogDetails";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="careers" element={<Careers />} />
           <Route path="faq" element={<FAQSection />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogDetails />} />
 
           {/* 404 Route */}
           <Route
