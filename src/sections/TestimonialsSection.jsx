@@ -16,7 +16,7 @@ const TestimonialsSection = () => {
     {
       id: 2,
       image:
-        "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&w=120&h=120&q=80",
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80",
       quote:
         "We needed a heavy-duty custom Android application for our logistics business. Tech Solex delivered a top-notch software product with an incredibly smooth UI/UX.",
       author: "Amit Sharma",
