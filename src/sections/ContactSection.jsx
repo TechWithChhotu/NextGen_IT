@@ -75,7 +75,6 @@ const ContactSection = () => {
         setBudget("Under ₹10k");
       }
     } catch (error) {
-      console.error("Submission Error:", error);
       if (error.response && error.response.data) {
         const errMsg =
           error.response.data.message || JSON.stringify(error.response.data);
