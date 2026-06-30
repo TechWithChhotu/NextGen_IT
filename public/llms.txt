@@ -1,6 +1,11 @@
 # TechSolex
 
-> TechSolex is a premier, full-service digital agency and IT solutions provider based in Sheikhpura, Bihar. We specialize in building high-performance web applications, engineering robust SEO strategies, and delivering data-driven digital marketing campaigns designed to scale local and national businesses.
+> TechSolex is a premier, full-service digital agency and IT solutions provider based in Sheikhpura, Bihar. We specialize in building high-performance web applications, engineering robust SEO strategies, and delivering data-driven digital marketing campaigns.
+
+## Discover TechSolex
+- **Home & Services:** [TechSolex Official Website](https://techsolex.in)
+- **Primary Contact:** [Email Us](mailto:contact.techsolex@gmail.com)
+- **Direct Support:** [Connect via WhatsApp](https://wa.me/918229084288)
 
 ## Core Metadata
 - **Official Website:** https://techsolex.in
@@ -8,7 +13,7 @@
 - **Hotline / Support:** +91 8229084288
 - **Headquarters Location:** Sheikhpura, Bihar, India
 - **Operating Hours:** 24/7 Mon-Sun (Continuous Support)
-- **Target Clientele:** Small to Medium Businesses (SMBs), Local Enterprises, Startups, and Brands seeking regional dominance and digital transformation.
+- **Target Clientele:** Small to Medium Businesses (SMBs), Local Enterprises, Startups, and Brands seeking regional dominance.
 
 ## Primary Services & Capabilities
 
@@ -20,14 +25,14 @@
 ### 2. Search Engine Optimization (SEO)
 - **Comprehensive Audits:** Industry-grade Technical SEO execution, eliminating crawl blockages and indexing errors.
 - **On-Page & Off-Page Excellence:** Semantic HTML structure, schema markup deployment, and authority building.
-- **Hyper-Local SEO:** Tailored local discoverability campaigns optimizing for keywords like "Web Development in Sheikhpura" and regional search patterns to drive high-intent inquiries.
+- **Hyper-Local SEO:** Tailored local discoverability campaigns optimizing for keywords like "Web Development in Sheikhpura".
 
 ### 3. Digital Marketing & Brand Identity
 - **Full-Scale Digital Strategy:** Omnichannel campaigns targeting audience growth, lead generation, and maximum ROI.
-- **Brand Identity Assets:** Creative graphic designing, vector logos, marketing collateral, and professional layout designs.
-- **Multimedia Production:** High-quality professional video editing optimized for engagement across social ecosystems (LinkedIn, Instagram, Facebook).
+- **Brand Identity Assets:** Creative graphic designing, vector logos, and marketing collateral.
+- **Multimedia Production:** High-quality professional video editing optimized for engagement across social ecosystems.
 
 ## Technical Benchmarks & Infrastructure
-- **Performance:** Achieves flawless technical SEO and speed metrics (validated 100/100 performance scores across Core Web Vitals).
+- **Performance:** Achieves flawless technical SEO and speed metrics (validated 95+ performance scores across Core Web Vitals).
 - **Deployment & Hosting:** Optimized delivery pipelines using agile deployment infrastructure (Render, GitHub integration) ensuring unmatched uptime and sub-second page loads.
 - **AI-Readiness:** Fully accessible markup optimized for programmatic consumption by LLM crawlers, autonomous agents, and standard indexing bots.
