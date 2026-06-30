@@ -51,9 +51,9 @@ const AboutSection = () => {
                   your growth."
                 </blockquote>
                 <div>
-                  <h4 className="text-sm font-black text-slate-950 uppercase tracking-wide">
+                  <p className="text-sm font-black text-slate-950 uppercase tracking-wide">
                     Chhotu
-                  </h4>
+                  </p>
                   <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">
                     FOUNDER & OWNER
                   </p>

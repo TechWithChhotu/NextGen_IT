@@ -282,11 +282,65 @@ const ContactSection = () => {
 
               {/* Service Field */}
               <div className="flex flex-col gap-2">
-                <label className="text-[11px] uppercase tracking-wider font-bold text-[#999999]">
+                {/* FIXED: Added htmlFor and updated text color for higher contrast */}
+                <label
+                  htmlFor="service-select"
+                  className="text-[11px] uppercase tracking-wider font-bold text-slate-600"
+                >
                   SERVICE INTERESTED IN *
                 </label>
                 <div className="relative">
+                  {/* FIXED: Added unique id to match the label's htmlFor */}
                   <select
+                    id="service-select"
+                    className="w-full bg-[#FFFFFF] border border-[#E5E7EB] rounded-md px-4 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#0A2E86] focus:ring-1 focus:ring-[#21C4FF] appearance-none cursor-pointer transition-all"
+                    value={formData.service}
+                    onChange={(e) =>
+                      setFormData({ ...formData, service: e.target.value })
+                    }
+                  >
+                    <option value="web-development">Website Development</option>
+                    <option value="app-development">
+                      Mobile App Development
+                    </option>
+                    <option value="digital-marketing">
+                      On-Page SEO & Digital Marketing
+                    </option>
+                    <option value="logo-design">Logo Design</option>
+                    <option value="graphic-design">Graphic Design</option>
+                    <option value="video-editing">Video Editing</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-[#666666]">
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              {/* Service Field */}
+              <div className="flex flex-col gap-2">
+                {/* FIXED: Added htmlFor and updated text color for higher contrast */}
+                <label
+                  htmlFor="service-select"
+                  className="text-[11px] uppercase tracking-wider font-bold text-slate-600"
+                >
+                  SERVICE INTERESTED IN *
+                </label>
+                <div className="relative">
+                  {/* FIXED: Added unique id to match the label's htmlFor */}
+                  <select
+                    id="service-select"
                     className="w-full bg-[#FFFFFF] border border-[#E5E7EB] rounded-md px-4 py-3 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#0A2E86] focus:ring-1 focus:ring-[#21C4FF] appearance-none cursor-pointer transition-all"
                     value={formData.service}
                     onChange={(e) =>

@@ -9,7 +9,7 @@ const TestimonialsSection = () => {
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80",
       quote:
         "Tech Solex developed our e-commerce platform from scratch. Unka code clean hai aur website ki speed super-fast hai. Best web development team in Sheikhpura!",
-      author: "Rajeev Kumar",
+      author: "Chhotu kumar",
       role: "Founder, Bihar Retails",
       service: "Web Development",
     },
