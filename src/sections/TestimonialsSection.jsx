@@ -114,9 +114,9 @@ const TestimonialsSection = () => {
                     className="w-10 h-10 rounded-full object-cover ring-2 ring-[#0A2E86]/20 shrink-0"
                   />
                   <div>
-                    <h4 className="font-black text-[#1A1A1A] text-xs tracking-tight">
+                    <h3 className="font-black text-[#1A1A1A] text-xs tracking-tight">
                       {t.author}
-                    </h4>
+                    </h3>
                     <p className="text-[11px] text-[#666666]">
                       {t.role} •{" "}
                       <span className="text-[#0A2E86] font-extrabold group-hover:text-[#21C4FF]">
