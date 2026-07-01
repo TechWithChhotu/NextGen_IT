@@ -509,7 +509,7 @@ const ServiceDetail = () => {
               {service.techStack.map((tech, i) => (
                 <span
                   key={i}
-                  className="bg-slate-100 text-slate-600 border border-slate-200 px-3.5 py-2 text-xs font-mono font-bold rounded"
+                  className="bg-slate-100 text-slate-700 border border-slate-200 px-3.5 py-2 text-xs font-mono font-bold rounded"
                 >
                   {tech}
                 </span>

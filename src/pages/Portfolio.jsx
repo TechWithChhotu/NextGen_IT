@@ -151,7 +151,7 @@ const Portfolio = () => {
                 className={`px-4 py-2 text-xs font-mono font-bold uppercase rounded-lg transition-all duration-200 shrink-0 ${
                   activeFilter === cat.slug
                     ? "bg-[#0068fc] text-white shadow-md shadow-blue-500/10"
-                    : "bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100"
+                    : "bg-slate-50 text-slate-700 border border-slate-200 hover:bg-slate-100"
                 }`}
               >
                 {cat.name}

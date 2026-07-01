@@ -180,7 +180,7 @@ const ServicesSection = () => {
         {/* Section Header with Optimized Semantic Structure */}
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-20 gap-8">
           <div className="max-w-xl">
-            <span className="text-xs uppercase tracking-[0.2em] text-[#21C4FF] font-black block mb-4">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#0468fd] font-black block mb-4">
               — CORE VERTICALS
             </span>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight text-slate-950">
@@ -248,7 +248,7 @@ const ServicesSection = () => {
                   {vertical.tags.map((tag, tagIdx) => (
                     <span
                       key={tagIdx}
-                      className="text-[9px] tracking-wider font-extrabold bg-slate-100 text-slate-500 px-2.5 py-1 rounded-md border border-slate-200/40 uppercase"
+                      className="text-[9px] tracking-wider font-extrabold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md border border-slate-200/40 uppercase"
                     >
                       {tag}
                     </span>

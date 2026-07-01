@@ -127,7 +127,7 @@ const ContactSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-xs uppercase tracking-wider text-[#999999] font-semibold block">
+                  <span className="text-xs uppercase tracking-wider text-[#555555] font-semibold block">
                     CALL US
                   </span>
                   <a
@@ -157,7 +157,7 @@ const ContactSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-xs uppercase tracking-wider text-[#999999] font-semibold block">
+                  <span className="text-xs uppercase tracking-wider text-[#555555] font-semibold block">
                     EMAIL
                   </span>
                   <a
@@ -193,7 +193,7 @@ const ContactSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-xs uppercase tracking-wider text-[#999999] font-semibold block">
+                  <span className="text-xs uppercase tracking-wider text-[#555555] font-semibold block">
                     LOCATION
                   </span>
                   <span className="text-base font-bold text-[#1A1A1A] block">
@@ -230,7 +230,7 @@ const ContactSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Name Field */}
               <div className="flex flex-col gap-2">
-                <label className="text-[11px] uppercase tracking-wider font-bold text-[#999999]">
+                <label className="text-[11px] uppercase tracking-wider font-bold text-[#555555]">
                   YOUR NAME *
                 </label>
                 <input
@@ -247,7 +247,7 @@ const ContactSection = () => {
 
               {/* Email Field */}
               <div className="flex flex-col gap-2">
-                <label className="text-[11px] uppercase tracking-wider font-bold text-[#999999]">
+                <label className="text-[11px] uppercase tracking-wider font-bold text-[#555555]">
                   EMAIL *
                 </label>
                 <input
@@ -266,7 +266,7 @@ const ContactSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Phone Field */}
               <div className="flex flex-col gap-2">
-                <label className="text-[11px] uppercase tracking-wider font-bold text-[#999999]">
+                <label className="text-[11px] uppercase tracking-wider font-bold text-[#555555]">
                   PHONE (OPTIONAL)
                 </label>
                 <input
@@ -332,7 +332,7 @@ const ContactSection = () => {
 
             {/* Estimated Budget Selector */}
             <div className="flex flex-col gap-3">
-              <label className="text-[11px] uppercase tracking-wider font-bold text-[#999999]">
+              <label className="text-[11px] uppercase tracking-wider font-bold text-[#555555]">
                 ESTIMATED BUDGET
               </label>
               <div className="flex flex-wrap gap-2">
@@ -355,7 +355,7 @@ const ContactSection = () => {
 
             {/* Description Message Box */}
             <div className="flex flex-col gap-2">
-              <label className="text-[11px] uppercase tracking-wider font-bold text-[#999999]">
+              <label className="text-[11px] uppercase tracking-wider font-bold text-[#555555]">
                 TELL US ABOUT YOUR PROJECT *
               </label>
               <textarea
@@ -426,7 +426,7 @@ const ContactSection = () => {
               </button>
             </div>
 
-            <p className="text-[11px] text-[#999999] leading-relaxed pt-2">
+            <p className="text-[11px] text-[#555555] leading-relaxed pt-2">
               By submitting, you agree to be contacted about your inquiry. We
               respond within 24 hours.
             </p>
