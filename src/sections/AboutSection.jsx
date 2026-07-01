@@ -54,7 +54,7 @@ const AboutSection = () => {
                   <p className="text-sm font-black text-slate-950 uppercase tracking-wide">
                     Chhotu
                   </p>
-                  <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">
+                  <p className="text-[10px] text-slate-700 font-bold uppercase tracking-wider mt-0.5">
                     FOUNDER & OWNER
                   </p>
                 </div>
@@ -123,7 +123,7 @@ const AboutSection = () => {
                 </svg>
               </div>
               <div>
-                <span className="text-[10px] tracking-widest text-slate-400 font-extrabold uppercase block mb-1">
+                <span className="text-[10px] tracking-widest text-slate-700 font-extrabold uppercase block mb-1">
                   MISSION
                 </span>
                 <p className="text-slate-600 text-xs md:text-sm font-medium leading-relaxed">
@@ -149,7 +149,7 @@ const AboutSection = () => {
                 </svg>
               </div>
               <div>
-                <span className="text-[10px] tracking-widest text-slate-400 font-extrabold uppercase block mb-1">
+                <span className="text-[10px] tracking-widest text-slate-700 font-extrabold uppercase block mb-1">
                   PROMISE
                 </span>
                 <p className="text-slate-600 text-xs md:text-sm font-medium leading-relaxed">
