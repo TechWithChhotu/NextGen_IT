@@ -380,7 +380,7 @@ export default function TechSolexFAQ() {
                       ${
                         isSelected
                           ? "bg-white border-white text-[#001c55] shadow-lg shadow-black/20"
-                          : "bg-white/5 border-white/10 text-slate-300 hover:border-white/20 hover:text-white"
+                          : "bg-white/5 border-white/10 text-white hover:border-white/20 hover:text-gray-500"
                       }
                     `}
                   >
@@ -442,7 +442,7 @@ export default function TechSolexFAQ() {
                         ${isOpen ? "max-h-[450px] opacity-100" : "max-h-0 opacity-0"}
                       `}
                     >
-                      <div className="px-5 pb-5 text-sm sm:text-[15px] text-slate-300 font-medium leading-relaxed border-t border-white/5 pt-4 bg-black/10">
+                      <div className="px-5 pb-5 text-sm sm:text-[15px] text-white font-medium leading-relaxed border-t border-white/5 pt-4 bg-black/10">
                         {faq.answer}
                       </div>
                     </div>

@@ -225,7 +225,7 @@ const ServicesSection = () => {
                     {vertical.icon}
                   </div>
                   {/* Structural Tracking Index Badge */}
-                  <span className="text-xs font-mono font-bold text-slate-300 tracking-wider group-hover:text-[#0A2E86]/40 transition-colors duration-300">
+                  <span className="text-xs font-mono font-bold text-slate-800 tracking-wider group-hover:text-slate-800/40 transition-colors duration-300">
                     {vertical.number}
                   </span>
                 </div>
