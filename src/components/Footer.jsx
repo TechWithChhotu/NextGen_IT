@@ -185,7 +185,7 @@ const Footer = () => {
           <div>
             <p>
               © {new Date().getFullYear()}{" "}
-              <strong className="text-white">TechSolex</strong>. All rights
+              <strong className="text-white">Techsolex</strong>. All rights
               reserved.
             </p>
           </div>
